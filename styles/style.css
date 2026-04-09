@@ -8,7 +8,9 @@ html {
   block-size: 100%;
 }
 
-.page {
+.page { 
+  justify-content: center;
+  align-items: center;
   display: flex;
   inline-size: 1200px;
   block-size: 100%;
@@ -63,19 +65,20 @@ ol {
   font-size: 75px;
   font-weight: 700;
   line-height: 70px;
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
 }
 
 .result__video-container {
   width: 711px;
   height: 386px;
-  margin-bottom: 16px;
+  margin-bottom: 22px;
 }
 
 .result__video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .search-form {
@@ -103,9 +106,9 @@ ol {
 }
 
 .search-form__label {
-  padding-top: 5px;
-  display: flex;
+  display: inline-flex;
   align-items: center;
+  padding: 0;
   width: fit-content;
   gap: 5px;
   cursor: pointer;
@@ -113,7 +116,7 @@ ol {
 
 .search-form__textfield {
   width: 225px;
-  font-family: "inherit";
+  font-family: inherit;
   font-size: 18px;
   line-height: 100%;
   border: none;
@@ -125,6 +128,7 @@ ol {
 }
 
 .search-form__textfield::placeholder {
+  font-family: "Fira Sans Condensed", sans-serif;
   color: rgb(255 255 255 / 0.7);
 }
 
@@ -152,7 +156,7 @@ ol {
 }
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
-  outline-offset: 2px;
+  outline-offset: 0;
 }
 .search-form__textfield:focus,
 .search-form__textfield:focus-visible {
@@ -169,10 +173,10 @@ ol {
 }
 
 .content__details {
-  padding-top: 180px;
-  display: inline-block;
+  margin-bottom: 68px;
+  display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   width: 100%;
   height: 100%;
 }
@@ -217,15 +221,13 @@ ol {
 
 .content__video-card-title {
   width: 196px;
-
+  font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 30px;
-
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-
   text-transform: uppercase;
 }
 
@@ -258,31 +260,31 @@ ol {
 }
 .button {
   border: 1px solid #ffffff;
-  font-family: "Fira Sans Condensed";
+  font-family: "Fira Sans Condensed", sans-serif;
   background-color: rgba(0, 0, 0, 0);
   color: #ffffff;
   cursor: pointer;
 }
 .search-form__submit-button {
-  width: 194px;
-  height: 34px;
+  width: 196px;
+  height: 36px;
   font-weight: 700;
   font-size: 18px;
   align-self: self-end;
 }
 .more-button {
-  width: 390px;
-  height: 34px;
+  width: 392px;
+  min-height: 36px;
   font-weight: 700;
   font-size: 18px;
 }
-.search-form__submit-button:active {
+.button:active {
   background-color: #545050;
 }
-.search-form__submit-button:hover {
+.button:hover {
   text-decoration: underline;
 }
-.search-form__submit-button:focus-visible {
+.button:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
